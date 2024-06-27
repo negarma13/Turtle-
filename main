@@ -1,0 +1,21 @@
+import turtle
+import random
+
+my_turtle = turtle.Turtle()
+color_list = ['red', 'purple', 'pink', 'gray', 'blue', 'yellow', 'green', 'brown']
+my_turtle.shape("turtle")
+
+def draw_shape(sides):
+    my_turtle.color(random.choice(color_list))
+    for i in range(sides):
+        my_turtle.forward(100)
+        my_turtle.right(360 / sides)
+
+for sides in range(3, 11):
+    draw_shape(sides)
+
+
+my_turtle.goto(0, 0)
+
+turtle.done()
+turtle.Screen().mainloop()
